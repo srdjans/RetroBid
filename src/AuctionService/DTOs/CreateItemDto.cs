@@ -1,10 +1,9 @@
 using AuctionService.Entities.Enums;
 
-namespace AuctionService.Data.DTOs;
+namespace AuctionService.DTOs;
 
-public class ItemDto
+public class CreateItemDto
 {
-    public required Guid Id { get; set; }
     public required ItemType Type { get; set; }
     public required string Title { get; set; }
     public string? Description { get; set; }
@@ -13,6 +12,5 @@ public class ItemDto
     public required ItemCondition Condition { get; set; }
     public required bool HasOriginalPackaging { get; set; }
     public string? ImageUrl { get; set; }
-    public required string PlatformName { get; set; }
-    public string? Manufacturer { get; set; }
+    public required Guid PlatformId { get; set; }
 }

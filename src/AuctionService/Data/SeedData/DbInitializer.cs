@@ -23,37 +23,37 @@ public static class DbInitializer
         var platforms = new List<Platform>
         {
             // Nintendo
-            new() { Name = "NES", Manufacturer = "Nintendo", ReleaseYear = 1985 },
-            new() { Name = "SNES", Manufacturer = "Nintendo", ReleaseYear = 1991 },
-            new() { Name = "Nintendo 64", Manufacturer = "Nintendo", ReleaseYear = 1996 },
-            new() { Name = "GameCube", Manufacturer = "Nintendo", ReleaseYear = 2001 },
-            new() { Name = "Wii", Manufacturer = "Nintendo", ReleaseYear = 2006 },
-            new() { Name = "Game Boy", Manufacturer = "Nintendo", ReleaseYear = 1989 },
-            new() { Name = "Game Boy Color", Manufacturer = "Nintendo", ReleaseYear = 1998 },
-            new() { Name = "Game Boy Advance", Manufacturer = "Nintendo", ReleaseYear = 2001 },
-            new() { Name = "Nintendo DS", Manufacturer = "Nintendo", ReleaseYear = 2004 },
+            new() { Id = Guid.NewGuid(), IsActive = true, Name = "NES", Manufacturer = "Nintendo", ReleaseYear = 1985 },
+            new() { Id = Guid.NewGuid(), Name = "SNES", Manufacturer = "Nintendo", ReleaseYear = 1991 },
+            new() { Id = Guid.NewGuid(), Name = "Nintendo 64", Manufacturer = "Nintendo", ReleaseYear = 1996 },
+            new() { Id = Guid.NewGuid(), Name = "GameCube", Manufacturer = "Nintendo", ReleaseYear = 2001 },
+            new() { Id = Guid.NewGuid(), Name = "Wii", Manufacturer = "Nintendo", ReleaseYear = 2006 },
+            new() { Id = Guid.NewGuid(), Name = "Game Boy", Manufacturer = "Nintendo", ReleaseYear = 1989 },
+            new() { Id = Guid.NewGuid(), Name = "Game Boy Color", Manufacturer = "Nintendo", ReleaseYear = 1998 },
+            new() { Id = Guid.NewGuid(), Name = "Game Boy Advance", Manufacturer = "Nintendo", ReleaseYear = 2001 },
+            new() { Id = Guid.NewGuid(), Name = "Nintendo DS", Manufacturer = "Nintendo", ReleaseYear = 2004 },
 
             // Sega
-            new() { Name = "Master System", Manufacturer = "Sega", ReleaseYear = 1985 },
-            new() { Name = "Genesis", Manufacturer = "Sega", ReleaseYear = 1988 },
-            new() { Name = "Saturn", Manufacturer = "Sega", ReleaseYear = 1994 },
-            new() { Name = "Dreamcast", Manufacturer = "Sega", ReleaseYear = 1998 },
-            new() { Name = "Game Gear", Manufacturer = "Sega", ReleaseYear = 1990 },
+            new() { Id = Guid.NewGuid(), Name = "Master System", Manufacturer = "Sega", ReleaseYear = 1985 },
+            new() { Id = Guid.NewGuid(), Name = "Genesis", Manufacturer = "Sega", ReleaseYear = 1988 },
+            new() { Id = Guid.NewGuid(), Name = "Saturn", Manufacturer = "Sega", ReleaseYear = 1994 },
+            new() { Id = Guid.NewGuid(), Name = "Dreamcast", Manufacturer = "Sega", ReleaseYear = 1998 },
+            new() { Id = Guid.NewGuid(), Name = "Game Gear", Manufacturer = "Sega", ReleaseYear = 1990 },
 
             // Sony
-            new() { Name = "PlayStation", Manufacturer = "Sony", ReleaseYear = 1994 },
-            new() { Name = "PlayStation 2", Manufacturer = "Sony", ReleaseYear = 2000 },
-            new() { Name = "PSP", Manufacturer = "Sony", ReleaseYear = 2004 },
+            new() { Id = Guid.NewGuid(), Name = "PlayStation", Manufacturer = "Sony", ReleaseYear = 1994 },
+            new() { Id = Guid.NewGuid(), Name = "PlayStation 2", Manufacturer = "Sony", ReleaseYear = 2000 },
+            new() { Id = Guid.NewGuid(), Name = "PSP", Manufacturer = "Sony", ReleaseYear = 2004 },
 
             // Atari
-            new() { Name = "Atari 2600", Manufacturer = "Atari", ReleaseYear = 1977 },
-            new() { Name = "Atari 5200", Manufacturer = "Atari", ReleaseYear = 1982 },
-            new() { Name = "Jaguar", Manufacturer = "Atari", ReleaseYear = 1993 },
+            new() { Id = Guid.NewGuid(), Name = "Atari 2600", Manufacturer = "Atari", ReleaseYear = 1977 },
+            new() { Id = Guid.NewGuid(), Name = "Atari 5200", Manufacturer = "Atari", ReleaseYear = 1982 },
+            new() { Id = Guid.NewGuid(), Name = "Jaguar", Manufacturer = "Atari", ReleaseYear = 1993 },
 
             // Other
-            new() { Name = "Neo Geo", Manufacturer = "SNK", ReleaseYear = 1990 },
-            new() { Name = "TurboGrafx-16", Manufacturer = "NEC", ReleaseYear = 1989 },
-            new() { Name = "3DO", Manufacturer = "Panasonic", ReleaseYear = 1993 },
+            new() { Id = Guid.NewGuid(), Name = "Neo Geo", Manufacturer = "SNK", ReleaseYear = 1990 },
+            new() { Id = Guid.NewGuid(), Name = "TurboGrafx-16", Manufacturer = "NEC", ReleaseYear = 1989 },
+            new() { Id = Guid.NewGuid(), Name = "3DO", Manufacturer = "Panasonic", ReleaseYear = 1993 },
         };
 
         context.Platforms.AddRange(platforms);
@@ -82,6 +82,7 @@ public static class DbInitializer
                 {
                     new Item
                     {
+                        Id = Guid.NewGuid(),
                         Type = ItemType.Game,
                         Title = "Chrono Trigger",
                         ReleaseYear = 1995,
@@ -105,6 +106,7 @@ public static class DbInitializer
                 {
                     new Item
                     {
+                        Id = Guid.NewGuid(),
                         Type = ItemType.Console,
                         Title = "Nintendo 64 Console - Atomic Purple",
                         ReleaseYear = 1996,
@@ -128,6 +130,7 @@ public static class DbInitializer
                 {
                     new Item
                     {
+                        Id = Guid.NewGuid(),
                         Type = ItemType.Console,
                         Title = "PlayStation 2 Slim Console",
                         ReleaseYear = 2004,
@@ -140,6 +143,7 @@ public static class DbInitializer
                     },
                     new Item
                     {
+                        Id = Guid.NewGuid(),
                         Type = ItemType.Game,
                         Title = "Final Fantasy X",
                         ReleaseYear = 2001,
@@ -152,6 +156,7 @@ public static class DbInitializer
                     },
                     new Item
                     {
+                        Id = Guid.NewGuid(),
                         Type = ItemType.Game,
                         Title = "Shadow of the Colossus",
                         ReleaseYear = 2005,
@@ -164,6 +169,7 @@ public static class DbInitializer
                     },
                     new Item
                     {
+                        Id = Guid.NewGuid(),
                         Type = ItemType.Accessory,
                         Title = "DualShock 2 Controller (Black)",
                         Description = "Lightly used spare controller, all buttons responsive.",
@@ -188,6 +194,7 @@ public static class DbInitializer
                 {
                     new Item
                     {
+                        Id = Guid.NewGuid(),
                         Type = ItemType.Game,
                         Title = "Skies of Arcadia",
                         ReleaseYear = 2000,
@@ -212,6 +219,7 @@ public static class DbInitializer
                 {
                     new Item
                     {
+                        Id = Guid.NewGuid(),
                         Type = ItemType.Game,
                         Title = "EarthBound",
                         ReleaseYear = 1995,

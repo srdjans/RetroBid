@@ -1,9 +1,9 @@
-namespace AuctionService.Data.DTOs;
+namespace AuctionService.DTOs;
 
 public class PlatformDto
 {
-    public Guid Id { get; set; }
+    public required Guid Id { get; set; }
     public required string Name { get; set; }  
     public string? Manufacturer { get; set; }  
-    public int ReleaseYear { get; set; }
+    public required int ReleaseYear { get; set; }
 }

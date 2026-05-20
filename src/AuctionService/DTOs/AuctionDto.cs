@@ -1,6 +1,6 @@
 using AuctionService.Entities.Enums;
 
-namespace AuctionService.Data.DTOs;
+namespace AuctionService.DTOs;
 
 public class AuctionDto
 {
@@ -14,5 +14,5 @@ public class AuctionDto
     public required DateTime UpdatedAt { get; set; }
     public required DateTime AuctionEnd { get; set; }
     public required AuctionStatus Status { get; set; }
-    public required List<ItemDto> Items { get; set; } = new();
+    public required List<ItemDto> Items { get; set; }
 }

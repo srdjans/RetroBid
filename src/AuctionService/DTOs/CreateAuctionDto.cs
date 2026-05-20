@@ -1,4 +1,4 @@
-namespace AuctionService.Data.DTOs;
+namespace AuctionService.DTOs;
 
 public class CreateAuctionDto
 {
